@@ -56,6 +56,20 @@ GameManager.prototype.setup = function () {
 
   // Update the actuator
   this.actuate();
+
+  var self = this;
+  setTimeout(function() {
+    self.autoPlay(0);
+  }, 1000);
+};
+
+GameManager.prototype.autoPlay = function (direction) {
+  var self = this;
+  self.move(direction);
+  direction = (direction + 1) % 4;
+  setTimeout(function() {
+    self.autoPlay(direction);
+  }, 100);
 };
 
 // Set up the initial tiles to start the game with
