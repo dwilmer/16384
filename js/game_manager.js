@@ -65,7 +65,11 @@ GameManager.prototype.setup = function () {
 
 GameManager.prototype.autoPlay = function (direction) {
   var self = this;
-  self.move(direction);
+  var actualDirection = direction;
+  if(actualDirection == 3) {
+    actualDirection = 1 // just go back and forth, instead of round and round
+  }
+  self.move(actualDirection);
   direction = (direction + 1) % 4;
   setTimeout(function() {
     self.autoPlay(direction);
