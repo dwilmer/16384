@@ -207,7 +207,6 @@ GameManager.prototype.getVector = function (direction) {
 GameManager.prototype.buildTraversals = function (vector) {
   var traversals = { x: [], y: [] };
 
-console.log("this.size", this.size);
   for (var pos = 0; pos < this.size; pos++) {
     traversals.x.push(pos);
     traversals.y.push(pos);
