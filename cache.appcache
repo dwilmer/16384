@@ -33,6 +33,7 @@ meta/og_image.png
 js/animframe_polyfill.js
 js/application.js
 js/bind_polyfill.js
+js/bot.js
 js/classlist_polyfill.js
 js/game_manager.js
 js/grid.js
